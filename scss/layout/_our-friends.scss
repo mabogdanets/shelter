@@ -1,0 +1,166 @@
+.our-friends {
+  background-color: $color-light-l;
+}
+
+.wrapper-our-friends {
+  @include padding-section;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 767px){
+    @include padding-section-mobile;
+  }
+}
+
+.our-friends__title{
+  background-color: $color-light-l;
+  width: 40rem;
+  text-align: center; 
+
+    @media screen and (max-width: 767px){
+      width: 30rem;
+      @include h3-mobile;
+      color: $color-dark-l;      
+  }
+}
+
+.carousel {
+  padding-top: 6rem;
+  display: flex;
+  align-items: center;
+  column-gap: 5.3rem;
+
+  @media screen and (max-width: 1279px) {  
+    column-gap: 1.2rem;
+  }
+  @media screen and (max-width: 767px){
+    width: 27rem;
+    padding-top: 4.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 8rem;
+  }
+
+  &__wrapper {
+    width: 99rem;
+    overflow: hidden;
+
+    @media screen and (max-width: 1279px) { 
+      width: 58rem;
+    }
+
+    @media screen and (max-width: 767px){
+      width: 27rem;
+    }
+  }
+
+  &__cards {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   left: -99rem;
+   //column-gap: 9rem;
+
+    @media screen and (max-width: 1279px) { 
+      column-gap: 4rem;
+    }
+    @media screen and (max-width: 767px){
+      height: 43.5rem;
+      order: 1;
+    }
+    @keyframes move-right {
+      from {left: -99rem;}
+      to {left: -198rem;}
+    }
+    @keyframes move-left {
+      from {left: -99rem;}
+      to {left: 0px;}
+    }
+
+    &.transition-right {
+      animation: move-right 1s;
+      animation-fill-mode: forwards;
+    }
+
+    &.transition-left {
+      animation: move-left 1s;
+      animation-fill-mode: forwards;
+    }
+ 
+  }
+
+  .carousel__cards>.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    column-gap: 9rem;
+    
+    @media screen and (max-width: 1279px) { 
+      column-gap: 4rem;
+    }
+  }
+
+  
+  &__btn:hover {
+    background-color: $color-primary-light;
+    border-color: $color-primary-light;
+    cursor: pointer;
+  }
+
+  &__btn.left {   
+    background-image: url("../assets/icons/arrow-left.svg");
+    
+    @media screen and (max-width: 767px){
+      order: 2;
+    }
+  }
+  
+  &__btn {
+    margin-top: 1.9rem;
+  }
+  &__btn.right {
+    background-image: url("../assets/icons/arrow-right.svg");
+    @media screen and (max-width: 767px){
+      order: 3;
+    }
+  }
+}
+
+.pet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 27rem;
+  height: 43.5rem;
+  background-color: $color-light-s;
+  border-radius: 0.9rem;
+
+  &:hover {
+    background-color: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+    & .pet__btn {
+      background-color: $color-primary;
+    }
+  }
+
+  &__name {
+    padding-top: 3rem;
+    @include pet-title;
+  }
+  
+  &__btn {
+    margin-top: 3rem;     
+
+  }
+}
+
+.know-rest-btn {
+  margin-top: 6rem;
+
+  @media screen and (max-width: 767px){
+    margin-top: 4.2rem;
+  }
+  
+}

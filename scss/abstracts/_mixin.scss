@@ -1,0 +1,12 @@
+@mixin padding-section{
+  padding: 8rem 0 10rem;
+}
+@mixin padding-section-mobile{
+  padding: 4.3rem 0 4.2rem;
+}
+@mixin icon( $width, $height){
+  display: inline-block;
+  background: no-repeat center;
+  height: $height;
+  width: $width;
+}

@@ -1,0 +1,54 @@
+
+html {
+ font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body{
+  //position: relative;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  font-style: normal;
+  //font-size: 1.6rem;
+  color: $color-text-gray;
+  overflow-x: hidden;
+}
+
+body.hidden-overflow-y {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+ 
+  @media screen and (max-width: 1279px) {
+    min-width: 708px; 
+    width: auto;
+    margin: 0 3rem;
+  }
+
+  @media screen and (max-width: 767px){
+    min-width: 300px;
+    width: auto;
+    margin: 0 1rem;
+  }
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}

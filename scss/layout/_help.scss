@@ -1,0 +1,117 @@
+.wrapper-help {
+  @include padding-section;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  @media screen and (max-width: 767px){
+    padding: 4.2rem 0 4.2rem;
+  }
+
+}
+
+.help__title {
+  width: 31rem;
+  justify-self: center;
+  text-align: center;
+
+  @media screen and (max-width: 767px){
+    @include h3-mobile;
+    color: $color-dark-l;
+    text-align: center;
+    width: 80%;
+  }
+ 
+}
+.help {
+  &__items{
+    padding-top: 6rem;
+    display: flex;
+    flex-wrap: wrap;    
+    column-gap: 12rem;
+    row-gap: 5.5rem;
+    justify-content: center;
+
+    @media screen and (max-width: 1279px) {
+      display: grid;
+      column-gap: 8vw;//6rem;    
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);  
+    }
+
+    @media screen and (max-width: 767px){
+      padding-top: 4.2rem;
+      row-gap: 3rem;
+      column-gap: 10vw;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr); 
+      width: 70%;
+      justify-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media screen and (max-width: 1279px) { 
+      width: 17rem;
+      height: 11.3rem;
+    }
+
+    @media screen and (max-width: 767px){
+      width: 13rem;
+      height: 8.7rem;
+    }
+  }
+
+  &__icon {
+    @include icon(6rem, 6rem);
+
+    &_food {
+      background-image: url("../assets/icons/icon-pet-food.svg");
+    }
+    &_transport {
+      background-image: url("../assets/icons/icon-transportation.svg");
+    }
+    &_toys {
+      background-image: url("../assets/icons/icon-toys.svg");
+    }
+    &_bowls {
+      background-image: url("../assets/icons/icon-bowls.svg");
+    }
+    &_shampoos {
+      background-image: url("../assets/icons/icon-shampoos.svg");
+    }
+    &_vitamins {
+      background-image: url("../assets/icons/icon-vitamins.svg");
+    }
+    &_medicines {
+      background-image: url("../assets/icons/icon-medicines.svg");
+    }
+    &_collars {
+      background-image: url("../assets/icons/icon-collars-leashes.svg");
+    }
+    &_sleeping {
+      background-image: url("../assets/icons/icon-sleeping-area.svg");
+    }
+
+    @media screen and (max-width: 767px){
+      background-size: contain;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__name {
+    @include h4;
+    margin-top: 3rem;  
+    
+    @media screen and (max-width: 767px){
+      @include h5;
+      margin-top: 2rem;
+    }
+  }
+}

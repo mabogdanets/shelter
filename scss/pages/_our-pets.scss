@@ -1,0 +1,123 @@
+// header section ///
+.header_pets {
+  top: 0;
+  position: sticky;
+  background: $color-light-xl;
+
+  &_not-stiky{
+    position: relative;
+  }
+  
+}
+
+.wrapper-header_pets {
+  padding: 3rem 0 3rem;
+ 
+}
+.logo__title_pets {
+  color: $color-dark-l;
+}
+.logo__subtitle_pets {
+  color: $color-dark-3xl;
+}
+
+.navigation__link_pets {
+  color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+    &:active {
+      color: $color-dark-3xl;
+    }
+}
+// our friends section ///
+
+.wrapper-our-friends_pets {
+  @include padding-section;
+
+  @media screen and (max-width: 1279px) {
+    padding: 8rem 0 7.6rem;
+  }
+  @media screen and (max-width: 767px){
+    @include padding-section-mobile;
+
+
+  }
+}
+
+.pagination__wrapper {
+  margin: 6rem 0 6rem;
+  display: flex;
+  width: 120rem;
+  overflow: hidden;
+
+  @media screen and (max-width: 1279px) {
+    margin: 3rem 0 4rem;
+  }
+  @media screen and (max-width: 767px){
+    margin: 4.2rem 0 4rem;
+  }     
+}
+.pagination__pages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.pagination__page{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  width: 120rem;
+
+  
+  @media screen and (max-width: 1279px) {
+    height: 136.5rem;
+    overflow: hidden;
+    display: grid;
+    column-gap: 5vw;//6rem;    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);  
+  }
+  @media screen and (max-width: 767px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.controls {
+  display: flex;
+  column-gap: 2rem;
+
+  @media screen and (max-width: 767px){
+    column-gap: 1rem;
+  }
+}
+
+.pagin__btn, 
+.pagin__page {
+  @include h4;
+  height: 5.2rem;
+  width: 5.2rem;
+  background: none;
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagin__btn:hover {
+  background: $color-primary-light;
+  border: none;
+}
+.pagin__btn.inactive {
+  border: 2px solid $color-dark-s;
+  color: $color-dark-s;
+  background: none;
+  cursor: unset;
+}
+.pagin__page {
+  background: $color-primary;
+  border: none;
+  cursor: unset;
+}

@@ -1,0 +1,99 @@
+footer {
+  background: $footer-gradient-background;
+}
+.wrapper-footer{
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1279px) {    
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 5%;//3.8rem;
+  }
+  @media screen and (max-width: 767px){
+    row-gap: 4rem;
+    column-gap: 5%;
+  }
+}
+.footer {
+  &__questions,
+  &__visit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    padding-top: 1.6rem;
+    width: 30.2rem;
+    height: 23.4rem;
+
+    @media screen and (max-width: 1279px) {   
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: 767px){
+      align-items: center;
+      height: 21rem;
+
+   }
+  }
+  &__visit {
+    width: 30.4rem;
+    height: 22rem;
+
+    @media screen and (max-width: 767px){
+      .contact__link {
+        align-self: flex-start;
+      }
+    }
+  }
+  &__img {
+    margin-left: 2rem;
+
+    @media screen and (max-width: 1279px) {  
+      margin-left: 0; 
+      padding-top: 6.5rem;
+    //  width: 42%;
+    }
+    @media screen and (max-width: 767px){
+      width: 86%;
+      max-width: 30.4rem;
+      padding-top: 0;
+    }
+  }
+  &__title {
+    @media screen and (max-width: 767px){
+      @include h3-mobile;
+      text-align: center;
+      width: 27rem;
+    }
+  }
+}
+
+.contact {
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  &__text {
+    @include h4;
+    color: $color-primary;
+  }
+}
+.contact__icon_mail {
+  @include icon(4rem, 3.2rem);
+  background-image: url("../assets/icons/icon-email.svg");
+}
+.contact__icon_phone {
+  @include icon(4rem, 3.2rem);
+  background-image: url("../assets/icons/icon-phone.svg");
+}
+.contact__icon_adress {
+  @include icon(2.2rem, 3.2rem);
+  background-image: url("../assets/icons/icon-marker.svg");
+}
+
+  
+  
