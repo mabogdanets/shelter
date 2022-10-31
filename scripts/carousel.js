@@ -57,7 +57,6 @@ fetch("scripts/pets.json")
     let lastIds = "",
         curIds = "";
     function fillCards(area){
-      console.log("numgen in func fillCards:", numGenerate);
       for (let i = 0; i < numGenerate; i++) {
         let num = getRandomNum();
         while(curIds.includes(num) || lastIds.includes(num)) {
