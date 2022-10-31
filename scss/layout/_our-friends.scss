@@ -55,6 +55,7 @@
     }
   }
 
+
   &__cards {
    display: flex;
    justify-content: space-between;
@@ -62,31 +63,56 @@
    left: -99rem;
    //column-gap: 9rem;
 
+   @keyframes move-right {
+    from {left: -99rem;}
+    to {left: -198rem;}
+  }
+
+  @keyframes move-left {
+    from {left: -99rem;}
+    to {left: 0px;}
+  }
+
     @media screen and (max-width: 1279px) { 
-      column-gap: 4rem;
-    }
-    @media screen and (max-width: 767px){
-      height: 43.5rem;
-      order: 1;
-    }
-    @keyframes move-right {
-      from {left: -99rem;}
-      to {left: -198rem;}
-    }
-    @keyframes move-left {
-      from {left: -99rem;}
-      to {left: 0px;}
+      left: -58rem;
+
+      @keyframes move-right {
+        from {left: -58rem;}
+        to {left: -116rem;}
+      }
+
+      @keyframes move-left {
+        from {left: -58rem;}
+        to {left: 0px;}
+      }
     }
 
+    @media screen and (max-width: 767px){
+      column-gap: 0rem;
+      height: 43.5rem;
+      left: -27rem;
+      order: 1;
+
+      @keyframes move-right {
+        from {left: -27rem;}
+        to {left: -54rem;}
+      }
+
+      @keyframes move-left {
+        from {left: -27rem;}
+        to {left: 0px;}
+      }
+    }
+  
     &.transition-right {
       animation: move-right 1s;
       animation-fill-mode: forwards;
-    }
-
+    } 
+    
     &.transition-left {
       animation: move-left 1s;
-      animation-fill-mode: forwards;
-    }
+      animation-fill-mode: forwards; 
+    }   
  
   }
 
@@ -98,6 +124,10 @@
     
     @media screen and (max-width: 1279px) { 
       column-gap: 4rem;
+    }
+        
+    @media screen and (max-width: 767px){
+      column-gap: 0rem;
     }
   }
 
