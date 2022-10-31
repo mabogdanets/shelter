@@ -17,7 +17,6 @@ fetch("scripts/pets.json")
       } else {
         numGenerate = 1;
       }
-      console.log("numgen in func numgen", numGenerate);
     }
     whichNumGen(); 
     ///создание карточки
@@ -76,14 +75,12 @@ fetch("scripts/pets.json")
       CARDS_LEFT.innerHTML = "";
       CARDS_RIGHT.innerHTML = "";
       CARDS_ACTIVE.innerHTML = "";
-      console.log('cleanArea()');
     }
 
     function fillAreas(){
       fillCards(CARDS_LEFT);
       fillCards(CARDS_ACTIVE);
       fillCards(CARDS_RIGHT);
-      console.log('fillAreas()') ;
     }
     fillAreas();
 
@@ -91,10 +88,8 @@ fetch("scripts/pets.json")
     function changeSize() {
       let prev = numGenerate;
       whichNumGen();
-      console.log('не работает?', prev, numGenerate);
 
       if (numGenerate!==prev){
-        console.log('не работает');
         cleanAreas();
         fillAreas(); 
       }
@@ -120,10 +115,13 @@ fetch("scripts/pets.json")
       if (animationEvent.animationName === "move-left") {
         CAROUSEL.classList.remove("transition-left");
         changedCards = CARDS_LEFT;
+        CARDS_RIGHT.innerHTML = CARDS_ACTIVE.innerHTML; 
         CARDS_ACTIVE.innerHTML = CARDS_LEFT.innerHTML;
+        
       } else {
         CAROUSEL.classList.remove("transition-right");
         changedCards = CARDS_RIGHT;
+        CARDS_LEFT.innerHTML = CARDS_ACTIVE.innerHTML; 
         CARDS_ACTIVE.innerHTML = CARDS_RIGHT.innerHTML;
       }
 
