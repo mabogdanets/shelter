@@ -63,15 +63,15 @@
    left: -99rem;
    //column-gap: 9rem;
 
-   @keyframes move-right {
-    from {left: -99rem;}
-    to {left: -198rem;}
-  }
+    @keyframes move-right {
+      from {left: -99rem;}
+      to {left: -198rem;}
+    }
 
-  @keyframes move-left {
-    from {left: -99rem;}
-    to {left: 0px;}
-  }
+    @keyframes move-left {
+      from {left: -99rem;}
+      to {left: 0px;}
+    }
 
     @media screen and (max-width: 1279px) { 
       left: -58rem;
@@ -103,7 +103,7 @@
         to {left: 0px;}
       }
     }
-  
+
     &.transition-right {
       animation: move-right 1s;
       animation-fill-mode: forwards;

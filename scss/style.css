@@ -578,8 +578,7 @@ li {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 @media screen and (max-width: 1279px) {
   .popup__items {
@@ -677,38 +676,17 @@ span.burger__btn_gray {
 }
 
 .burger_open {
-  -webkit-animation: rotating-right 0.5s linear;
-          animation: rotating-right 0.5s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: rotating-right 0.5s linear;
+  animation-fill-mode: forwards;
 }
 
 .burger_close {
-  -webkit-animation: rotating-left 0.5s linear;
-          animation: rotating-left 0.5s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: rotating-left 0.5s linear;
+  animation-fill-mode: forwards;
   animation-direction: reverse;
 }
 
-@-webkit-keyframes rotating-right {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
-
 @keyframes rotating-right {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
-@-webkit-keyframes rotating-left {
   from {
     transform: none;
   }
@@ -1079,28 +1057,12 @@ span.burger__btn_gray {
   position: relative;
   left: -99rem;
 }
-@-webkit-keyframes move-right {
-  from {
-    left: -99rem;
-  }
-  to {
-    left: -198rem;
-  }
-}
 @keyframes move-right {
   from {
     left: -99rem;
   }
   to {
     left: -198rem;
-  }
-}
-@-webkit-keyframes move-left {
-  from {
-    left: -99rem;
-  }
-  to {
-    left: 0px;
   }
 }
 @keyframes move-left {
@@ -1115,28 +1077,12 @@ span.burger__btn_gray {
   .carousel__cards {
     left: -58rem;
   }
-  @-webkit-keyframes move-right {
-    from {
-      left: -58rem;
-    }
-    to {
-      left: -116rem;
-    }
-  }
   @keyframes move-right {
     from {
       left: -58rem;
     }
     to {
       left: -116rem;
-    }
-  }
-  @-webkit-keyframes move-left {
-    from {
-      left: -58rem;
-    }
-    to {
-      left: 0px;
     }
   }
   @keyframes move-left {
@@ -1156,28 +1102,12 @@ span.burger__btn_gray {
     left: -27rem;
     order: 1;
   }
-  @-webkit-keyframes move-right {
-    from {
-      left: -27rem;
-    }
-    to {
-      left: -54rem;
-    }
-  }
   @keyframes move-right {
     from {
       left: -27rem;
     }
     to {
       left: -54rem;
-    }
-  }
-  @-webkit-keyframes move-left {
-    from {
-      left: -27rem;
-    }
-    to {
-      left: 0px;
     }
   }
   @keyframes move-left {
@@ -1190,16 +1120,12 @@ span.burger__btn_gray {
   }
 }
 .carousel__cards.transition-right {
-  -webkit-animation: move-right 1s;
-          animation: move-right 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: move-right 1s;
+  animation-fill-mode: forwards;
 }
 .carousel__cards.transition-left {
-  -webkit-animation: move-left 1s;
-          animation: move-left 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: move-left 1s;
+  animation-fill-mode: forwards;
 }
 .carousel .carousel__cards > .cards {
   display: flex;
@@ -1684,7 +1610,6 @@ footer {
 
 .header_pets {
   top: 0;
-  position: -webkit-sticky;
   position: sticky;
   background: #FFFFFF;
 }

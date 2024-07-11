@@ -59,7 +59,7 @@ fetch("scripts/pets.json")
     function fillCards(area){
       for (let i = 0; i < numGenerate; i++) {
         let num = getRandomNum();
-        while(curIds.includes(num) || lastIds.includes(num)) {
+        while (curIds.includes(num) || lastIds.includes(num)) {
           num = getRandomNum();
         }  
         curIds += num;

@@ -52,4 +52,19 @@ fetch("scripts/pets.json")
 
       PAGIN.appendChild(page);
     }
+
+    const moveLeft = () => {
+      
+    }
+
+    BTN_LEFT.addEventListener("click", moveLeft);
+
+    
+    //BTN_LEFTEND.addEventListener("click", moveLeftEnd);
+
+    BTN_RIGHT.addEventListener("click", moveRight);
+    //BTN_RIGHTEND.addEventListener("click", moveLeft);
+
+
+
   });
