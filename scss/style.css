@@ -352,6 +352,7 @@ template {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -608,7 +609,6 @@ li {
   align-items: center;
   padding-top: 6rem;
   transition: flex 0.5s ease;
-  overflow: hidden;
 }
 @media screen and (max-width: 1279px) {
   .wrapper-header {
@@ -720,7 +720,7 @@ span.burger__btn_gray {
 
 @media screen and (max-width: 767px) {
   .navigation {
-    display: flex;
+    display: none;
     position: absolute;
     align-items: center;
     top: 0;
@@ -738,6 +738,7 @@ span.burger__btn_gray {
 }
 .navigation_burgered {
   right: 0;
+  display: flex;
 }
 .navigation__items {
   display: flex;

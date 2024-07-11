@@ -2,9 +2,10 @@
 html {
  font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-body{
+ body{
   //position: relative;
   font-family: 'Georgia', serif;
   font-weight: normal;
@@ -12,6 +13,7 @@ body{
   //font-size: 1.6rem;
   color: $color-text-gray;
   overflow-x: hidden;
+
 }
 
 body.hidden-overflow-y {

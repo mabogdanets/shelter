@@ -1,10 +1,11 @@
+
 .wrapper-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 6rem;
   transition: flex 0.5s ease; 
-  overflow: hidden;
+
 
   @media screen and (max-width: 1279px) {
     padding-top: 3rem;
@@ -100,7 +101,7 @@ span.burger__btn {
 .navigation {
   
   @media screen and (max-width: 767px){
-    display: flex;
+    display: none;
     position: absolute;
     align-items: center;
     top:0;
@@ -116,7 +117,8 @@ span.burger__btn {
     background: $color-light-xl;
   }
   &_burgered{
-    right: 0;     
+    right: 0; 
+    display: flex;    
   }
   
   &__items{
@@ -127,6 +129,7 @@ span.burger__btn {
     width: 44.3rem;
 
     @media screen and (max-width: 767px){
+      
        flex-direction: column;
       align-items: center;
       height: 32.7rem;
